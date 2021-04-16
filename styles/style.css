@@ -121,7 +121,7 @@ html {
 }
 
 .section1 nav .row-nav .menu-btn__burger {
-  width: 25px;
+  width: 30px;
   height: 2px;
   background: whitesmoke;
   border-radius: 5px;
@@ -133,7 +133,7 @@ html {
 .section1 nav .row-nav .menu-btn__burger::after {
   content: "";
   position: absolute;
-  width: 25px;
+  width: 30px;
   height: 2px;
   background: whitesmoke;
   border-radius: 5px;
@@ -606,7 +606,7 @@ html {
   .section1 .menu-open .mo {
     margin-right: 30px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     padding: 15px 0px;
     text-decoration: none;
     color: white;
