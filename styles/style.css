@@ -99,8 +99,8 @@ html {
   opacity: 0;
   margin-right: 10%;
   letter-spacing: 3px;
-  -webkit-animation: nav-title 1s 1.8s forwards;
-          animation: nav-title 1s 1.8s forwards;
+  -webkit-animation: nav-title 1s 1.6s forwards;
+          animation: nav-title 1s 1.6s forwards;
 }
 
 .section1 nav .row-nav .menu-btn {
@@ -116,8 +116,8 @@ html {
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  -webkit-animation: nav-title 1s 2s forwards;
-          animation: nav-title 1s 2s forwards;
+  -webkit-animation: nav-title 1s 1.6s forwards;
+          animation: nav-title 1s 1.6s forwards;
 }
 
 .section1 nav .row-nav .menu-btn__burger {
@@ -172,20 +172,30 @@ html {
 }
 
 .section1 .menu-open {
+  opacity: 0;
   display: none;
 }
 
 .section1 .row1 {
-  position: relative;
-  opacity: 0;
-  bottom: -50px;
   font-size: 4em;
-  margin-top: 50px;
-  -webkit-animation: row1 1s ease-out 1s forwards;
-          animation: row1 1s ease-out 1s forwards;
 }
 
-.section1 .row1 .identical {
+.section1 .row1 .equation {
+  margin-top: 50px;
+  position: relative;
+  opacity: 0;
+  bottom: -30px;
+  -webkit-animation-name: row1;
+          animation-name: row1;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.section1 .row1 .equation .identical {
   position: relative;
   top: -5px;
   font-size: 1.1em;
@@ -234,7 +244,7 @@ html {
 @-webkit-keyframes row1 {
   0% {
     opacity: 0;
-    bottom: -150px;
+    bottom: -30px;
   }
   100% {
     opacity: 1;
@@ -245,7 +255,7 @@ html {
 @keyframes row1 {
   0% {
     opacity: 0;
-    bottom: -150px;
+    bottom: -30px;
   }
   100% {
     opacity: 1;
@@ -605,24 +615,24 @@ html {
     transition: margin-right 0.750s ease-in, opacity 0.750s ease-in-out;
   }
   .section1 .menu-open .mo:first-child {
-    -webkit-transition-delay: 0.150s;
-            transition-delay: 0.150s;
+    -webkit-transition-delay: 0.100s;
+            transition-delay: 0.100s;
   }
   .section1 .menu-open .mo:nth-child(2) {
+    -webkit-transition-delay: 0.200s;
+            transition-delay: 0.200s;
+  }
+  .section1 .menu-open .mo:nth-child(3) {
     -webkit-transition-delay: 0.300s;
             transition-delay: 0.300s;
   }
-  .section1 .menu-open .mo:nth-child(3) {
-    -webkit-transition-delay: 0.450s;
-            transition-delay: 0.450s;
-  }
   .section1 .menu-open .mo:nth-child(4) {
-    -webkit-transition-delay: 0.600s;
-            transition-delay: 0.600s;
+    -webkit-transition-delay: 0.400s;
+            transition-delay: 0.400s;
   }
   .section1 .menu-open .mo:nth-child(5) {
-    -webkit-transition-delay: 0.750s;
-            transition-delay: 0.750s;
+    -webkit-transition-delay: 0.500s;
+            transition-delay: 0.500s;
   }
   .section1 .menu-open .mo-slide {
     opacity: 1;

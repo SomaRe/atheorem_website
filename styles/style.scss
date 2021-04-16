@@ -85,7 +85,7 @@ html {
         opacity: 0;
         margin-right: 10%;
         letter-spacing: 3px;
-        animation: nav-title 1s 1.8s forwards;
+        animation: nav-title 1s 1.6s forwards;
       }
       /*Hamburger */
       .menu-btn {
@@ -96,7 +96,7 @@ html {
         align-items: center;
         cursor: pointer;
         transition: all 0.5s ease-in-out;
-        animation: nav-title 1s 2s forwards;
+        animation: nav-title 1s 1.6s forwards;
       
       }
       .menu-btn__burger {
@@ -140,20 +140,28 @@ html {
     }
   }
   .menu-open {
+    opacity: 0;
     display: none;
   }
   .row1 {
-    position: relative;
-    opacity: 0;
-    bottom: -50px;
+    
     font-size: 4em;
+    .equation{
     margin-top: 50px;
-    animation: row1 1s ease-out 1s forwards;
+      position: relative;
+    opacity: 0;
+    bottom: -30px;
+    animation-name: row1;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
     .identical {
       position: relative;
       top: -5px;
       font-size: 1.1em;
     }
+    }
+    
   }
 }
 
@@ -180,7 +188,7 @@ html {
 @keyframes row1 {
   0%{
       opacity: 0;
-      bottom: -150px;
+      bottom: -30px;
   }
   100%{
     opacity: 1;
@@ -439,19 +447,19 @@ html {
         opacity: 0;
         transition: margin-right 0.750s ease-in, opacity 0.750s ease-in-out;
         &:first-child{
-          transition-delay: 0.150s;
+          transition-delay: 0.100s;
         }
         &:nth-child(2){
-          transition-delay: 0.300s;
+          transition-delay: 0.200s;
         }
         &:nth-child(3){
-          transition-delay: 0.450s;
+          transition-delay: 0.300s;
         }
         &:nth-child(4){
-          transition-delay: 0.600s;
+          transition-delay: 0.400s;
         }
         &:nth-child(5){
-          transition-delay: 0.750s;
+          transition-delay: 0.500s;
         }
       }
       .mo-slide {
