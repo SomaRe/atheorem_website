@@ -611,8 +611,8 @@ html {
     text-decoration: none;
     color: white;
     opacity: 0;
-    -webkit-transition: margin-right 0.750s ease-in, opacity 0.750s ease-in-out;
-    transition: margin-right 0.750s ease-in, opacity 0.750s ease-in-out;
+    -webkit-transition: margin-right 0.5s ease-in, opacity 0.5s ease-in-out;
+    transition: margin-right 0.5s ease-in, opacity 0.5s ease-in-out;
   }
   .section1 .menu-open .mo:first-child {
     -webkit-transition-delay: 0.100s;
