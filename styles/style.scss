@@ -67,10 +67,11 @@ html {
   color: white;
   font-family: "Roboto Mono", monospace;
   nav {
+    width: 0px;
     animation-name: navigation-animation;
     animation-duration: 1s;
     animation-delay: 0.5s;
-    width: 100%;
+    animation-fill-mode: forwards;
     position: relative;
     .row-nav {
       display: flex;
@@ -78,7 +79,6 @@ html {
       align-items: center;
       padding-bottom: 30px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.555);
-      width: 100%;
       transition: width 1s ease-out;
       .title {
         position: relative;
@@ -220,7 +220,7 @@ html {
     p {
       font-weight: 200;
       max-height: 80vh;
-      margin-right: 10px;
+      margin-right: 20px;
       overflow-y: scroll;
     }
   }
@@ -387,13 +387,12 @@ html {
   }
 }
 
+/* MOBILE VIEW OPTIMIZATION */
 @media screen and (max-width: 768px) {
   * {
     outline: 0px red solid;
   }
 
-  .section2,
-  .section3,
   .section4,
   .section5,
   .contact {
@@ -404,7 +403,6 @@ html {
     padding: 40px 40px;
     position: relative;
     nav {
-      width: 100%;
       .row-nav {
         padding-bottom: 20px;
         justify-content: space-between;
@@ -471,7 +469,7 @@ html {
       opacity: 1;
     }
     .row1 {
-      text-align: center;
+      text-align: left;
       font-size: 34px;
       margin-top: 30px;
       letter-spacing: 0.5em;
@@ -484,32 +482,52 @@ html {
     }
   }
   .section2 {
-    background-color: white;
-    color: $black;
-    display: flex;
     .col1 {
-      width: 20%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      background-color: rgb(241, 241, 241);
       h1 {
         font-size: 3em;
         transform: rotate(-90deg);
       }
     }
     .col2 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       padding: 20px;
+      font-size: 12px;
+    }
+  }
+  .section3 {
+    padding: 5px;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    .col1 {
+      width: 100%;
+      padding: 0 10px;
       p {
+        font-size: 14px;
+        max-height: 40vh;
+      }
+    }
+    .col2 {
+      width: 100%;
+      padding: 0 10px;
+      margin: 0px;
+      justify-content: space-around;
+      h2 {
+        font-size: 16px;
+        margin-left: 0px;
+      }
+      img {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-height: 80%;
+        width: auto;
+      }
+      .designation {
+        font-size: 12px;
+        transform: none;
         font-weight: 200;
-        max-height: 80vh;
-        margin-right: 10px;
-        overflow-y: scroll;
+        font-style: oblique;
       }
     }
   }
 }
+

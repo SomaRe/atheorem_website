@@ -65,13 +65,15 @@ html {
 }
 
 .section1 nav {
+  width: 0px;
   -webkit-animation-name: navigation-animation;
           animation-name: navigation-animation;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
-  width: 100%;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   position: relative;
 }
 
@@ -87,7 +89,6 @@ html {
           align-items: center;
   padding-bottom: 30px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.555);
-  width: 100%;
   -webkit-transition: width 1s ease-out;
   transition: width 1s ease-out;
   /*Hamburger */
@@ -307,7 +308,7 @@ html {
 .section2 .col2 p {
   font-weight: 200;
   max-height: 80vh;
-  margin-right: 10px;
+  margin-right: 20px;
   overflow-y: scroll;
 }
 
@@ -545,12 +546,11 @@ html {
   width: 50%;
 }
 
+/* MOBILE VIEW OPTIMIZATION */
 @media screen and (max-width: 768px) {
   * {
     outline: 0px red solid;
   }
-  .section2,
-  .section3,
   .section4,
   .section5,
   .contact {
@@ -559,9 +559,6 @@ html {
   .section1 {
     padding: 40px 40px;
     position: relative;
-  }
-  .section1 nav {
-    width: 100%;
   }
   .section1 nav .row-nav {
     padding-bottom: 20px;
@@ -642,7 +639,7 @@ html {
     opacity: 1;
   }
   .section1 .row1 {
-    text-align: center;
+    text-align: left;
     font-size: 34px;
     margin-top: 30px;
     letter-spacing: 0.5em;
@@ -653,48 +650,56 @@ html {
     top: -1px;
     font-size: 42px;
   }
-  .section2 {
-    background-color: white;
-    color: #020b17;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .section2 .col1 {
-    width: 20%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-color: #f1f1f1;
-  }
   .section2 .col1 h1 {
     font-size: 3em;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
   }
   .section2 .col2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     padding: 20px;
+    font-size: 12px;
   }
-  .section2 .col2 p {
+  .section3 {
+    padding: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .section3 .col1 {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .section3 .col1 p {
+    font-size: 14px;
+    max-height: 40vh;
+  }
+  .section3 .col2 {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .section3 .col2 h2 {
+    font-size: 16px;
+    margin-left: 0px;
+  }
+  .section3 .col2 img {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-height: 80%;
+    width: auto;
+  }
+  .section3 .col2 .designation {
+    font-size: 12px;
+    -webkit-transform: none;
+            transform: none;
     font-weight: 200;
-    max-height: 80vh;
-    margin-right: 10px;
-    overflow-y: scroll;
+    font-style: oblique;
   }
 }
 /*# sourceMappingURL=style.css.map */
