@@ -143,8 +143,12 @@ html {
     display: none;
   }
   .row1 {
+    position: relative;
+    opacity: 0;
+    bottom: -50px;
     font-size: 4em;
     margin-top: 50px;
+    animation: row1 1s ease-out 1s forwards;
     .identical {
       position: relative;
       top: -5px;
@@ -168,6 +172,17 @@ html {
     bottom: -30px;
   }
   100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
+@keyframes row1 {
+  0%{
+      opacity: 0;
+      bottom: -150px;
+  }
+  100%{
     opacity: 1;
     bottom: 0px;
   }
@@ -413,7 +428,7 @@ html {
       right: 0px;
       opacity: 0;
       flex-direction: column;
-      transition: opacity 0.5s ease-in;
+      transition: opacity 1s ease-in;
       .mo {
         margin-right: 30px;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -422,7 +437,22 @@ html {
         text-decoration: none;
         color: white;
         opacity: 0;
-        transition: margin-right 0.5s ease-in, opacity 0.5s ease-in;
+        transition: margin-right 0.750s ease-in, opacity 0.750s ease-in-out;
+        &:first-child{
+          transition-delay: 0.150s;
+        }
+        &:nth-child(2){
+          transition-delay: 0.300s;
+        }
+        &:nth-child(3){
+          transition-delay: 0.450s;
+        }
+        &:nth-child(4){
+          transition-delay: 0.600s;
+        }
+        &:nth-child(5){
+          transition-delay: 0.750s;
+        }
       }
       .mo-slide {
         opacity: 1;

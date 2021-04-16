@@ -19,7 +19,7 @@ menuBtn.addEventListener('click', () => {
     Open = false;
     menuBtn.classList.remove('open');
     menuOpen.classList.remove('opened');
-    equation.style.display ="block";
+    setTimeout(()=>equation.style.display ="block" ,800) ;
     mo.forEach(function (e){
       e.classList.remove('mo-slide')
   });

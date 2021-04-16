@@ -176,8 +176,13 @@ html {
 }
 
 .section1 .row1 {
+  position: relative;
+  opacity: 0;
+  bottom: -50px;
   font-size: 4em;
   margin-top: 50px;
+  -webkit-animation: row1 1s ease-out 1s forwards;
+          animation: row1 1s ease-out 1s forwards;
 }
 
 .section1 .row1 .identical {
@@ -219,6 +224,28 @@ html {
   0% {
     opacity: 0;
     bottom: -30px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
+@-webkit-keyframes row1 {
+  0% {
+    opacity: 0;
+    bottom: -150px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
+@keyframes row1 {
+  0% {
+    opacity: 0;
+    bottom: -150px;
   }
   100% {
     opacity: 1;
@@ -563,8 +590,8 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-transition: opacity 0.5s ease-in;
-    transition: opacity 0.5s ease-in;
+    -webkit-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
   }
   .section1 .menu-open .mo {
     margin-right: 30px;
@@ -574,8 +601,28 @@ html {
     text-decoration: none;
     color: white;
     opacity: 0;
-    -webkit-transition: margin-right 0.5s ease-in, opacity 0.5s ease-in;
-    transition: margin-right 0.5s ease-in, opacity 0.5s ease-in;
+    -webkit-transition: margin-right 0.750s ease-in, opacity 0.750s ease-in-out;
+    transition: margin-right 0.750s ease-in, opacity 0.750s ease-in-out;
+  }
+  .section1 .menu-open .mo:first-child {
+    -webkit-transition-delay: 0.150s;
+            transition-delay: 0.150s;
+  }
+  .section1 .menu-open .mo:nth-child(2) {
+    -webkit-transition-delay: 0.300s;
+            transition-delay: 0.300s;
+  }
+  .section1 .menu-open .mo:nth-child(3) {
+    -webkit-transition-delay: 0.450s;
+            transition-delay: 0.450s;
+  }
+  .section1 .menu-open .mo:nth-child(4) {
+    -webkit-transition-delay: 0.600s;
+            transition-delay: 0.600s;
+  }
+  .section1 .menu-open .mo:nth-child(5) {
+    -webkit-transition-delay: 0.750s;
+            transition-delay: 0.750s;
   }
   .section1 .menu-open .mo-slide {
     opacity: 1;
